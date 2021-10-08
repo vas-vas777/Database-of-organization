@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Department ..> Employee
+
+class Employee {
++birthday
++FIO
++post
++number_of_hours
++SNILS
++date_of_start
++data_of_employee()
+}
+
+class Department {
++name_of_department
++description
++vacancy_of_depart
++dictionary
++print_data_of_employees_from_department()
++search_employee_by_SNILS(SNILS)
++search_employee_by_FIO(FIO)
++change_data_of_employee_by_SNILS(SNILS)
++search_and_delete_by_SNILS(SNILS)
++print_name_of_departments()
++change_data_of_department()
++del_department()
++add_employee_to_department()
+}
+
+Employee "1..*" -- "0..*" Department
+@enduml
